@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function toString(check) {
+        let Star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let Constellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        let flag = false;
+        let cons ="";
+        for (let i =0; i <Star.length;i++) {
+            if (check == Star[i]) {
+                flag = true;
+                cons =  Constellation[i];
+            }
+        }
+
+        if(flag){
+            document.write("Thuộc chòm sao:" +cons);
+        } else {
+            document.write("Không tìm thấy");
+        }
+
+    }
+    let check = prompt("Nhập vào ngôi sao");
+    toString(check);
+</script>
+
+</body>
+</html>
