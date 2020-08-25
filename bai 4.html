@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let size = +prompt("Nhập kích thước mảng:");
+    for (let i = 0; i<size; i++) {
+        let a = prompt("Nhập phần tử vào mảng");
+        array.push(a);
+    }
+    function character() {
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] > '0' && array[i] <= '9') {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+    if (character()) {
+        alert('True');
+    } else {
+        alert('False');
+    }
+</script>
+</body>
+</html>

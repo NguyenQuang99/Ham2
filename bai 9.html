@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let size = +prompt("Nhap vao size cua mang:");
+    for (let i =0; i<size; i++) {
+        let input_number = +prompt("Nhap ki tu");
+        arr.push(input_number);
+
+    }
+    alert(arr);
+    let search_number = prompt('nhap');
+    function check(numbers) {
+        let count = 0;
+        for (let i =0; i< arr.length; i++) {
+            if (numbers == arr[i]) {
+                count++;
+                alert(count);
+            } else {
+                return -1;
+            }
+        }
+    }
+
+    check(search_number);
+
+</script>
+</body>
+</html>
