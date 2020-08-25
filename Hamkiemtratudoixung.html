@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Kiem tra tu doi xung</h1>
+<label>
+    <input id="input" type="text" placeholder="Nhap tu doi xung">
+</label>
+<button onclick="check()">Kiem tra</button>
+<br><br>
+<div>Nghich dao: <span id="reverse"></span></div>
+<div>Ket qua: <span id="result"></span></div>
+<script>
+    function check() {
+        let words = document.getElementById("input").value;
+
+        let wordsArray = Array.from(words);
+        let x = 0;
+        let y = wordsArray.length - 1;
+        document.getElementById("reverse").innerHTML = wordsArray.reverse().join("");
+
+        if (isPalindrome(words, x, y)) {
+            document.getElementById("result").innerHTML = "Day la tu doi xung";
+        } else {
+            document.getElementById("result").innerHTML = "Day khong phai la tu doi xung";
+        }
+    }
+    function isPalindrome(string, n, m) {
+        if (n === m || n > m) {
+            return 1;
+        } else {
+            if (string[n] !== string[m]) {
+                return 0;
+            } else {
+                return isPalindrome(string, n + 1, m - 1)
+            }
+        }
+    }
+</script>
+</body>
+</html>
